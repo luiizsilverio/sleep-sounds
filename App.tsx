@@ -9,7 +9,7 @@ import {
   Nunito_700Bold 
 } from '@expo-google-fonts/nunito';
 import { theme } from './src/theme';
-import Intro from './src/pages/intro';
+import Launch from './src/pages/Launch';
 
 function MyLoading() {
   return (
@@ -33,8 +33,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Intro />
-      <StatusBar style="auto" />
+      <Launch />
+      <StatusBar style="light" translucent />
     </ThemeProvider>
   );
 }
