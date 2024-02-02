@@ -2,7 +2,9 @@ import * as S from './styles';
 import LogoSvg from '../../assets/sleep-sounds-logo.svg';
 import CreatedSvg from '../../assets/createdby.svg';
 import LargeTitle from "../../components/LargeTitle";
-import useTheme from '../../hooks/useTheme';
+
+import {useTheme} from 'styled-components/native';
+// import useTheme from '../../hooks/useTheme';
 
 export default function Launch() {
   const theme = useTheme();

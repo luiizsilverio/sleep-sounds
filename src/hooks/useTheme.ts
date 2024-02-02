@@ -7,3 +7,5 @@ const useTheme = () => {
 }
 
 export default useTheme;
+
+// Não é mais utilizado, pois o Styled-components tem o seu próprio hook useTheme

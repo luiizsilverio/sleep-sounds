@@ -19,6 +19,6 @@ export const Footer = styled.View`
 
 export const Text = styled.Text`
   font-family: ${({ theme }) => theme.fonts.tab.family};
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fonts.footnote.size};
   color: ${({ theme }) => theme.colors.text.medium};
 `;
