@@ -32,10 +32,16 @@ export const DotsContainer = styled.View`
 
 `;
 
-export const Dot = styled.View`
+interface DotProps {
+  active: boolean;
+}
+
+export const Dot = styled.View<DotProps>`
   width: 8px;
   height: 8px;
-  background-color: ${({theme}) => theme.colors.background.secondary};
   border-radius: 4px;
   margin: 0 ${({theme}) => theme.spaces.space1};
+  background-color: ${(props) => props.active 
+    ? ({theme}) => theme.colors.system.primary
+    : ({theme}) => theme.colors.background.secondary};
 `;
