@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { 
   useFonts, 
   Nunito_400Regular, 
@@ -10,8 +11,7 @@ import {
 } from '@expo-google-fonts/nunito';
 
 import { theme } from './src/theme';
-import Launch from './src/pages/Launch';
-import Login from './src/pages/Login';
+import { Routes } from './src/routes';
 
 function MyLoading() {
   return (
@@ -35,8 +35,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {/* <Launch /> */}
-      <Login />
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
       <StatusBar style="light" translucent />
     </ThemeProvider>
   );

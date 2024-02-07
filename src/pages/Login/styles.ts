@@ -36,7 +36,7 @@ interface DotProps {
   active: boolean;
 }
 
-export const Dot = styled.View<DotProps>`
+export const Dot = styled.TouchableOpacity<DotProps>`
   width: 8px;
   height: 8px;
   border-radius: 4px;

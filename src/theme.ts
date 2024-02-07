@@ -72,7 +72,7 @@ declare module 'styled-components' {
 export const theme: DefaultTheme = {
     colors: {
         separator: '#21283F',
-        gray: '#8E8E93',
+        gray: '#73798C', //'#8E8E93',
         background: {
             primary: '#141927',
             secondary: '#21283F',
