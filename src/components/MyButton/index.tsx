@@ -15,8 +15,10 @@ export default function MyButton({ text, bgColor, icon }: Props) {
 
   return (
     <S.TouchableOpacity bgColor={bgColor}>
-      {icon && <S.IconContainer>{ icon }</S.IconContainer>}
-      <HeadlineText color={theme.colors.text.high}>{ text }</HeadlineText>
+      <S.Content>
+        { icon }
+        <HeadlineText color={theme.colors.text.high}>{ text }</HeadlineText>
+      </S.Content>
     </S.TouchableOpacity>
   )
 }

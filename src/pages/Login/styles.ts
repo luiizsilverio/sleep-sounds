@@ -1,7 +1,4 @@
-import { Dimensions } from 'react-native';
 import styled from "styled-components/native";
-
-const largura = Dimensions.get('window').width;
 
 export const Container = styled.View`
   flex: 1;
@@ -10,12 +7,15 @@ export const Container = styled.View`
   align-items: center;
 `;
 
-export const SlideWrapper = styled.View`
+interface SlideProps {
+  width: number
+}
+
+export const SlideWrapper = styled.View<SlideProps>`
   justify-content: center;
   align-items: center;
-  width: ${largura}px;
+  width: ${props => props.width}px;
   gap: ${({ theme }) => theme.spaces.space3};
-
 `;
 
 export const TextContainer = styled.View`
@@ -25,11 +25,11 @@ export const TextContainer = styled.View`
 `;
 
 export const DotsContainer = styled.View`
-  flex: 1;
+  /* flex: 1; */
+  height: 50px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 `;
 
 interface DotProps {
@@ -44,4 +44,13 @@ export const Dot = styled.View<DotProps>`
   background-color: ${(props) => props.active 
     ? ({theme}) => theme.colors.system.primary
     : ({theme}) => theme.colors.background.secondary};
+`;
+
+export const CarouselContainer = styled.View`
+  flex-shrink: 1;
+`;
+
+export const ButtonContainer = styled.View`
+  flex-direction: column;
+  padding: ${({ theme }) => theme.spaces.space3};
 `;

@@ -10,12 +10,14 @@ export const TouchableOpacity = styled.TouchableOpacity<Props>`
   justify-content: center;
   flex-direction: row;
   background-color: ${(props) => props.bgColor};
-  gap: ${({theme}) => theme.spaces.space2};
   height: 50px;
   width: 100%;
   border-radius: 50px;  
 `;
 
-export const IconContainer = styled.View`
-
+export const Content = styled.View`
+  flex: 1;
+  justify-content: center;
+  flex-direction: row;
+  gap: ${({theme}) => theme.spaces.space2};
 `;
