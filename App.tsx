@@ -35,10 +35,10 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar style="light" translucent />
       <NavigationContainer>
         <Routes />
       </NavigationContainer>
-      <StatusBar style="light" translucent />
     </ThemeProvider>
   );
 }
