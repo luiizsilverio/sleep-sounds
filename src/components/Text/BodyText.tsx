@@ -4,11 +4,12 @@ import * as S from './styles';
 
 interface Props {
   color: string;
+  textAlign?: string;
   children: ReactNode;
 }
 
-export default function BodyText({ color, children }: Props) {
+export default function BodyText({ children, ...rest }: Props) {
   return (
-    <S.Text color={ color }>{ children }</S.Text>
+    <S.BodyText {...rest}>{ children }</S.BodyText>
   )
 }

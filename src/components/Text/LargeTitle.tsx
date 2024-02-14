@@ -4,12 +4,12 @@ import * as S from './styles';
 
 interface Props {
   color: string;
+  textAlign?: string;
   children: ReactNode;
 }
 
-export default function HeadlineText({ color, children }: Props) {
-
+export default function LargeTitle({ children, ...rest }: Props) {
   return (
-    <S.Text color={color}>{ children }</S.Text>
+    <S.LargeText {...rest}>{ children }</S.LargeText>
   )
 }

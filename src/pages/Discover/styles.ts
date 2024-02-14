@@ -11,11 +11,17 @@ export const Header = styled.View`
   height: 120px;
   justify-content: flex-end;
   padding: ${({theme}) => theme.spaces.space3};
+  padding-bottom: ${({theme}) => theme.spaces.space2};
 `;
 
-export const ChipsContainer = styled.ScrollView`
-  flex: 1;
-  padding: ${({theme}) => theme.spaces.space2} 0;
-  margin-left: ${({theme}) => theme.spaces.space2};
+export const ChipsContainer = styled.View`
+  width: 100%;
+  padding: 0 ${({theme}) => theme.spaces.space2};
+  margin-bottom: ${({theme}) => theme.spaces.space2};
+`;
 
+export const ChipsScrollView = styled.ScrollView`
+`;
+
+export const PlaylistContainer = styled.View`
 `;

@@ -3,7 +3,7 @@ import { ButtonProps } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 import * as S from './styles';
-import HeadlineText from '../HeadlineText';
+import HeadlineText from '../Text/HeadlineText';
 
 interface Props extends ButtonProps {
   title: string;

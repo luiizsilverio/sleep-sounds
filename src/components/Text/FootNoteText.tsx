@@ -4,11 +4,12 @@ import * as S from './styles';
 
 interface Props {
   color: string;
+  textAlign?: string;
   children: ReactNode;
 }
 
-export default function LargeTitle({ color, children }: Props) {
+export default function FootNoteText({ children, ...rest }: Props) {
   return (
-    <S.Text color={ color }>{ children }</S.Text>
+    <S.FootText {...rest}>{ children }</S.FootText>
   )
 }

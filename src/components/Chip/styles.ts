@@ -15,9 +15,8 @@ export const Container = styled.TouchableOpacity<Props>`
     ? props.theme.colors.system.primary 
     : props.theme.colors.background.secondary
   };
-  margin-left: ${({theme}) => theme.spaces.space2};
+  margin: ${({theme}) => theme.spaces.space2};
   gap: ${({theme}) => theme.spaces.space2};
-
 `;
 
 export const TextWrapper = styled.View`

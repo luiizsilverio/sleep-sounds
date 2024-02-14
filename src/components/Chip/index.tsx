@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { Text } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
-import HeadlineText from '../HeadlineText';
+import HeadlineText from '../Text/HeadlineText';
 import * as S from './styles';
 
 interface Props {

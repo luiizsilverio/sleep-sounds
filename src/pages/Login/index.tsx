@@ -3,12 +3,12 @@ import { Dimensions, NativeScrollEvent, NativeSyntheticEvent, ScrollView, Image,
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useTheme } from 'styled-components/native';
 
-import Image1 from '../../assets/login-slide-1.svg';
-import Image2 from '../../assets/login-slide-2.svg';
-import Image3 from '../../assets/login-slide-3.svg';
+// import Image1 from '../../assets/login-slide-1.svg';
+// import Image2 from '../../assets/login-slide-2.svg';
+// import Image3 from '../../assets/login-slide-3.svg';
 
-import LargeTitle from '../../components/LargeTitle';
-import BodyText from '../../components/BodyText';
+import LargeTitle from '../../components/Text/LargeTitle';
+import BodyText from '../../components/Text/BodyText';
 import MyButton from '../../components/MyButton';
 import slides from '../../utils/carousel';
 import * as S from './styles';
@@ -63,7 +63,9 @@ export default function Login() {
               <Image source={slide.image} />
               <S.TextContainer>
                 <LargeTitle color={theme.colors.text.high}>{ slide.title }</LargeTitle>
-                <BodyText color={theme.colors.text.medium}>{ slide.subtitle }</BodyText>
+                <BodyText color={theme.colors.text.medium} textAlign='center'>
+                  { slide.subtitle }
+                </BodyText>
               </S.TextContainer>
             </S.SlideWrapper>
           ))}        
