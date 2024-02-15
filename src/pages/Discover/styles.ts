@@ -8,7 +8,7 @@ export const Container = styled.SafeAreaView`
 
 export const Header = styled.View`
   width: 100%;
-  height: 120px;
+  height: 96px;
   justify-content: flex-end;
   padding: ${({theme}) => theme.spaces.space3};
   padding-bottom: ${({theme}) => theme.spaces.space2};
@@ -24,4 +24,5 @@ export const ChipsScrollView = styled.ScrollView`
 `;
 
 export const PlaylistContainer = styled.View`
+  flex: 1;
 `;

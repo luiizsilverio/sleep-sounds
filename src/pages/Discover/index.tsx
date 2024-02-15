@@ -7,6 +7,8 @@ import AmbientSvg from '../../assets/chip-icon-ambient.svg';
 import KidsSvg from '../../assets/chip-icon-kids.svg';
 import Playlist from '../../components/Playlist';
 import * as S from './styles';
+import { FlatList } from 'react-native';
+import { playlistData } from '../../utils/playlist';
 
 export function Discover() {
   const theme = useTheme();
@@ -25,19 +27,33 @@ export function Discover() {
         >
           <Chip text='Todos' 
             active
-            icon={<AllSvg viewBox='0 0 16 16' width={18} height={18} color={theme.colors.text.high} />} 
+            icon={<AllSvg viewBox='0 0 16 16' width={16} height={16} color={theme.colors.text.high} />} 
           />
           <Chip text='Ambiente' 
-            icon={<AmbientSvg viewBox='0 0 16 16' width={18} height={18} color={theme.colors.text.high} />} 
+            icon={<AmbientSvg viewBox='0 0 16 16' width={16} height={16} color={theme.colors.text.high} />} 
           />
           <Chip text='Crianças' 
-            icon={<KidsSvg viewBox='0 0 16 16' width={18} height={18} color={theme.colors.text.high} />} 
+            icon={<KidsSvg viewBox='0 0 16 16' width={16} height={16} color={theme.colors.text.high} />} 
           />        
         </S.ChipsScrollView>
       </S.ChipsContainer>
 
       <S.PlaylistContainer>
-        <Playlist />
+        <FlatList
+          data={playlistData}
+          keyExtractor={({id}) => id}
+          numColumns={2}
+          showsVerticalScrollIndicator={false}
+          columnWrapperStyle={{ justifyContent: 'space-between'}}
+          contentContainerStyle={{ 
+            paddingHorizontal: 16, 
+            paddingBottom: 64 
+          }}
+          // pagingEnabled
+          renderItem={({ item, index, separators }) => (
+            <Playlist data={item} />
+          )}
+        />
       </S.PlaylistContainer>
       
     </S.Container>    
