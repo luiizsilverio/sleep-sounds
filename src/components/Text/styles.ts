@@ -30,6 +30,19 @@ export const FootText = styled.Text<Props>`
   font-family: ${({ theme }) => theme.fonts.footnote.family};
   font-size: ${({ theme }) => theme.fonts.footnote.size};
   color: ${(props) => props.color};
-  text-align: center;
+  text-align: ${(props) => props.textAlign || 'left'};
+`;
+
+export const Title2Text = styled.Text<Props>`
+  font-family: ${({ theme }) => theme.fonts.title2.family};
+  font-size: ${({ theme }) => theme.fonts.title2.size};
+  color: ${(props) => props.color};
+  text-align: ${(props) => props.textAlign || 'left'};
+`;
+
+export const SubheadText = styled.Text<Props>`
+  font-family: ${({ theme }) => theme.fonts.subhead.family};
+  font-size: ${({ theme }) => theme.fonts.subhead.size};
+  color: ${(props) => props.color};
   text-align: ${(props) => props.textAlign || 'left'};
 `;

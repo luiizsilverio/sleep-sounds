@@ -11,7 +11,7 @@ interface Props {
   active?: boolean;
 }
 
-export function Chip({ text, icon, active = false }: Props) {
+export default function Chip({ text, icon, active = false }: Props) {
   const theme = useTheme();
   return (
     <S.Container active={active}>
