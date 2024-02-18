@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import {useTheme} from 'styled-components/native';
-import { Feather } from '@expo/vector-icons';
+import { Feather, Entypo, FontAwesome } from '@expo/vector-icons';
 
 import coverImg from '../../assets/cover-guitar-camp.png';
 import MoodIcon from '../../assets/icon-mood.svg';
@@ -11,6 +11,9 @@ import FootNoteText from '../../components/Text/FootNoteText';
 import { Title2Text } from '../../components/Text/styles';
 import LargeTitle from '../../components/Text/LargeTitle';
 import SubTitle from '../../components/Text/SubTitle';
+import Divider from '../../components/Divider';
+import MyButton from '../../components/MyButton';
+import HeadlineText from '../../components/Text/HeadlineText';
 
 
 export default function PlaylistDetail() {
@@ -62,6 +65,41 @@ export default function PlaylistDetail() {
               <SubTitle color={theme.colors.text.medium}>7 songs  {'\u2022'}  instrumental</SubTitle>
             </S.PackContent>
           </S.PackHeader>
+
+          <Divider />
+          
+          <S.ButtonsWrapper>
+            <S.ButtonContainer>
+              <MyButton
+                title="Iniciar"
+                icon={<Entypo name="controller-play" size={24} color={theme.colors.text.high} />}
+                bgColor={theme.colors.system.primary}
+              />
+            </S.ButtonContainer>
+            <S.ButtonContainer>
+              <MyButton
+                title="Favorito"
+                icon={<FontAwesome name="star" size={24} color={theme.colors.text.high} />}
+                bgColor={theme.colors.background.secondary}
+              />
+            </S.ButtonContainer>
+          </S.ButtonsWrapper>
+
+          <Divider />
+
+          <S.AboutWrapper>
+            <HeadlineText color={theme.colors.text.high}>
+              Sobre esta playlist
+            </HeadlineText>
+            <BodyText color={theme.colors.text.medium}>
+              An acoustic mix has been specially selected for you. The camping atmosphere will help you improve your sleep and your body as a whole. Your dreams will be delightful and vivid.
+            </BodyText>
+          </S.AboutWrapper>
+
+          <S.ListOfSongs>
+
+          </S.ListOfSongs>
+
         </S.PackWrapper>
       </S.ScrollView>
     </S.Container>

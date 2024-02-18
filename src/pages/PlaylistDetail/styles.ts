@@ -46,13 +46,13 @@ export const PackWrapper = styled.View`
   background: ${({ theme }) => theme.colors.background.primary};
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  height: 400px;
+  height: 700px;
   flex: 1;
   margin-top: -24px;
+  padding: 0 ${({ theme }) => theme.spaces.space3};  
   `;
 
 export const PackHeader = styled.View`
-  padding: 0 ${({ theme }) => theme.spaces.space3};  
 `;
 
 export const TopLine = styled.View`
@@ -64,4 +64,31 @@ export const TopLine = styled.View`
 `;
 
 export const PackContent = styled.View`
+  margin-bottom: 26px;
+`;
+
+export const ButtonsWrapper = styled.View`  
+  height: 86px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: ${({ theme }) => theme.spaces.space3}; 
+`;
+
+export const ButtonContainer = styled.View`
+  flex-shrink: 1;
+`;
+
+export const AboutWrapper = styled.View`
+  height: 152px;
+  padding: ${({ theme }) => theme.spaces.space3} 0;
+  /* background-color: red; */
+  gap: 4px;
+`;
+
+export const ListOfSongs = styled.View`
+  height: 269px;
+  background: ${({ theme }) => theme.colors.background.secondary};
+  border-radius: ${({ theme }) => theme.spaces.space3};  
+  padding: ${({ theme }) => theme.spaces.space3};  
 `;
