@@ -20,7 +20,8 @@ export const Header = styled.TouchableOpacity`
   z-index: 9;
 `;
 
-export const ScrollView = styled.ScrollView`
+// export const ScrollView = styled.ScrollView`
+export const Content = styled.View`
   flex: 1;
 `;
 
@@ -46,13 +47,14 @@ export const PackWrapper = styled.View`
   background: ${({ theme }) => theme.colors.background.primary};
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  height: 700px;
+  /* height: 700px; */
   flex: 1;
-  margin-top: -24px;
+  //margin-top: -24px;
   padding: 0 ${({ theme }) => theme.spaces.space3};  
   `;
 
 export const PackHeader = styled.View`
+  /* padding-top: ${({ theme }) => theme.spaces.space3}; */
 `;
 
 export const TopLine = styled.View`
@@ -68,7 +70,7 @@ export const PackContent = styled.View`
 `;
 
 export const ButtonsWrapper = styled.View`  
-  height: 86px;
+  height: 74px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -86,9 +88,21 @@ export const AboutWrapper = styled.View`
   gap: 4px;
 `;
 
+export const ListOfSongsTitle = styled.View`
+  margin-bottom: ${({ theme }) => theme.spaces.space1};
+`;
+
 export const ListOfSongs = styled.View`
-  height: 269px;
+  /* height: 269px; */
+  flex: 1;
   background: ${({ theme }) => theme.colors.background.secondary};
   border-radius: ${({ theme }) => theme.spaces.space3};  
   padding: ${({ theme }) => theme.spaces.space3};  
+  padding-bottom: 0;
+`;
+
+export const FeaturedOn = styled.View`
+  height: 264px;
+  padding: ${({ theme }) => theme.spaces.space3} 0;
+
 `;

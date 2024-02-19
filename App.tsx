@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { View, ActivityIndicator } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
 import { NavigationContainer } from '@react-navigation/native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
 import { 
   useFonts, 
   Nunito_400Regular, 
@@ -39,9 +41,13 @@ export default function App() {
         backgroundColor={theme.colors.background.primary} 
         translucent={false} 
       />
-      <NavigationContainer>
-        <Routes />
-      </NavigationContainer>
+
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <NavigationContainer>
+          <Routes />
+        </NavigationContainer>
+      </GestureHandlerRootView>
+        
     </ThemeProvider>
   );
 }

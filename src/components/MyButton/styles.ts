@@ -2,6 +2,7 @@ import styled from "styled-components/native";
 
 interface Props {
   bgColor: string;
+  height: number;
 }
 
 export const TouchableOpacity = styled.TouchableOpacity<Props>`
@@ -10,7 +11,7 @@ export const TouchableOpacity = styled.TouchableOpacity<Props>`
   justify-content: center;
   flex-direction: row;
   background-color: ${(props) => props.bgColor};
-  height: 50px;
+  height: ${(props) => props.height}px;
   width: 100%;
   border-radius: 50px;  
 `;
