@@ -1,4 +1,4 @@
-import { FlatList } from 'react-native';
+import { Alert, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useTheme } from 'styled-components/native';
 
@@ -10,15 +10,16 @@ import LargeTitle from '../../components/Text/LargeTitle';
 import Chip from '../../components/Chip';
 import Playlist from '../../components/Playlist';
 
-import { playlistData } from '../../utils/playlist';
+import { PlaylistProps, playlistData } from '../../utils/playlist';
 import * as S from './styles';
 
 export function Discover() {
   const theme = useTheme();
   const navigation = useNavigation();
 
-  function handleDetails() {
-    navigation.navigate('PlaylistDetail')
+  function handleDetails(data: PlaylistProps) {
+    // Alert.alert('nome:'+ data.name)
+    navigation.navigate('PlaylistDetail', { data });
   }
 
   return (
@@ -59,7 +60,7 @@ export function Discover() {
           }}
           // pagingEnabled
           renderItem={({ item, index, separators }) => (
-            <Playlist data={item} onPress={handleDetails} />
+            <Playlist data={item} onPress={() => handleDetails(item)} />
           )}
         />
       </S.PlaylistContainer>

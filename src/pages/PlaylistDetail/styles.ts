@@ -1,7 +1,7 @@
 import { Dimensions } from "react-native";
 import styled from "styled-components/native";
 
-const altura = Dimensions.get('window').height * 0.8;
+const altura = Dimensions.get('window').height;
 
 export const Container = styled.SafeAreaView`
   flex: 1;
@@ -27,7 +27,7 @@ export const Content = styled.View`
 
 export const CoverImage = styled.ImageBackground`
   flex: 1;
-  height: ${altura}px;
+  height: ${altura * 0.8}px;
   justify-content: center;
   align-items: center;
 `;
@@ -39,17 +39,14 @@ export const IconContainer = styled.View`
 
 export const IconBox = styled.View`
   align-items: center;
-  /* border: 1px solid white; */
 `;
 
 export const PackWrapper = styled.View`
+  flex: 1;
   position: relative;
   background: ${({ theme }) => theme.colors.background.primary};
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  /* height: 700px; */
-  flex: 1;
-  //margin-top: -24px;
   padding: 0 ${({ theme }) => theme.spaces.space3};  
   `;
 
@@ -82,19 +79,15 @@ export const ButtonContainer = styled.View`
 `;
 
 export const AboutWrapper = styled.View`
-  height: 152px;
   padding: ${({ theme }) => theme.spaces.space3} 0;
-  /* background-color: red; */
   gap: 4px;
 `;
 
 export const ListOfSongsTitle = styled.View`
-  margin-bottom: ${({ theme }) => theme.spaces.space1};
+  margin-bottom: ${({ theme }) => theme.spaces.space2};
 `;
 
 export const ListOfSongs = styled.View`
-  /* height: 269px; */
-  flex: 1;
   background: ${({ theme }) => theme.colors.background.secondary};
   border-radius: ${({ theme }) => theme.spaces.space3};  
   padding: ${({ theme }) => theme.spaces.space3};  
@@ -102,7 +95,12 @@ export const ListOfSongs = styled.View`
 `;
 
 export const FeaturedOn = styled.View`
-  height: 264px;
   padding: ${({ theme }) => theme.spaces.space3} 0;
+  padding-top: 20px;
+`;
 
+export const PlaylistWrapper = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
 `;

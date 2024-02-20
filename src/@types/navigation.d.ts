@@ -1,7 +1,9 @@
+import { PlaylistProps } from "../utils/playlist";
+
 export declare global {
   namespace ReactNavigation {
     interface RootParamList {
-      PlaylistDetail: undefined;
+      PlaylistDetail: { data: PlaylistProps };
     }
   }
 }

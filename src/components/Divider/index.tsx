@@ -1,9 +1,13 @@
+import { useTheme } from 'styled-components/native';
 import * as S from './styles';
 
-export default function Divider() {
+interface Props {
+  color?: string;
+}
+export default function Divider({ color }: Props) {
+  const theme = useTheme();
+
   return (
-    <S.Container>
-      
-    </S.Container>
+    <S.Container color={color || theme.colors.separator} />
   )
 }
