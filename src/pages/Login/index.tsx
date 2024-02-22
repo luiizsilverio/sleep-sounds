@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Dimensions, NativeScrollEvent, NativeSyntheticEvent, ScrollView, Image, GestureResponderEvent } from 'react-native';
+import { Dimensions, NativeScrollEvent, NativeSyntheticEvent, ScrollView, Image } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useTheme } from 'styled-components/native';
 

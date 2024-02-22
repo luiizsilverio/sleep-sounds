@@ -1,9 +1,16 @@
 import { PlaylistProps } from "../utils/playlist";
 
+export interface TabMainRoutes {
+  discover: undefined;
+  composer: undefined;
+  profile: undefined;
+}
+
 export declare global {
   namespace ReactNavigation {
     interface RootParamList {
-      PlaylistDetail: { data: PlaylistProps };
+      TabMain: TabMainRoutes,
+      PlaylistDetail: { data: PlaylistProps }
     }
   }
 }

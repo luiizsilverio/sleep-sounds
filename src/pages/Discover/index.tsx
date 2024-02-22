@@ -1,4 +1,4 @@
-import { Alert, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useTheme } from 'styled-components/native';
 
@@ -18,7 +18,6 @@ export function Discover() {
   const navigation = useNavigation();
 
   function handleDetails(data: PlaylistProps) {
-    // Alert.alert('nome:'+ data.name)
     navigation.navigate('PlaylistDetail', { data });
   }
 

@@ -1,5 +1,4 @@
-import { Alert } from 'react-native';
-import { useEffect, useMemo, useRef } from 'react';
+import { useMemo, useRef } from 'react';
 // import { ScrollView } from "react-native";
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation, useRoute } from '@react-navigation/native';
@@ -7,7 +6,7 @@ import {useTheme} from 'styled-components/native';
 import { Feather, Entypo, FontAwesome } from '@expo/vector-icons';
 import BottomSheet from '@gorhom/bottom-sheet';
 
-import coverImg from '../../assets/cover-guitar-camp.png';
+// import coverImg from '../../assets/cover-guitar-camp.png';
 import MoodIcon from '../../assets/icon-mood.svg';
 import SleepIcon from '../../assets/icon-sleeping.svg';
 
@@ -34,7 +33,7 @@ export default function PlaylistDetail() {
   const theme = useTheme();
   const navigation = useNavigation();
   const route = useRoute();
-  const { data } = route.params; 
+  const { data } = route.params as Props;
 
   const bottomSheetRef = useRef<BottomSheet>(null);
   const snapPoints = useMemo(() => ['27%', '60%', '94%'], []);
