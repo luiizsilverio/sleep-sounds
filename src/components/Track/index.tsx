@@ -12,7 +12,12 @@ interface Props {
   showSeparator?: boolean;
 }
 
-function renderIcon(status, color: string) {
+interface IconProps {
+  status: string;
+  color: string;
+}
+
+function RenderIcon({ status, color }: IconProps) {
   if (status === "locked") {
     return <Feather name="lock" size={18} color={color} />
   } 
@@ -38,9 +43,7 @@ export default function Track({ song, showSeparator = true }: Props) {
         </FootNoteText>
         
         <S.IconWrapper>
-          {
-            renderIcon(song.status, theme.colors.text.high)
-          }
+          <RenderIcon status={song.status} color={theme.colors.text.high} />
         </S.IconWrapper>
 
         <BodyText color={theme.colors.text.high}>{song.name}</BodyText>
